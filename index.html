@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <title>Memory Game</title>
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <div class="btn-play">PLAY</div>
+    <div class="result hidden">
+      <div class="result-title">YOU WIN!</div>
+      <div class="result-message">Play again</div>
+    </div>
+
+    <div class="control-content">
+      <div class="timer-label">00 : 00 : 00</div>
+      <div class="moves-label">Moves: 0</div>
+    </div>
+    <div class="cards-container">
+      <div class="card" data-food="hot-dog">
+        <img class="front-face" src="imgs/hot-dog.jpg" />
+        <img class="back-face" src="imgs/back-face.jpg" />
+      </div>
+      <div class="card" data-food="sandwish">
+        <img class="front-face" src="imgs/sandwish.jpg" />
+        <img class="back-face" src="imgs/back-face.jpg" />
+      </div>
+      <div class="card" data-food="nuggets">
+        <img class="front-face" src="imgs/nuggets.jpg" />
+        <img class="back-face" src="imgs/back-face.jpg" />
+      </div>
+      <div class="card" data-food="fries">
+        <img class="front-face" src="imgs/fries.jpg" />
+        <img class="back-face" src="imgs/back-face.jpg" />
+      </div>
+      <div class="card" data-food="chessburger">
+        <img class="front-face" src="imgs/chessburger.jpg" />
+        <img class="back-face" src="imgs/back-face.jpg" />
+      </div>
+      <div class="card" data-food="humburger">
+        <img class="front-face" src="imgs/humburger.jpg" />
+        <img class="back-face" src="imgs/back-face.jpg" />
+      </div>
+      <div class="card" data-food="chips">
+        <img class="front-face" src="imgs/chips.jpg" />
+        <img class="back-face" src="imgs/back-face.jpg" />
+      </div>
+      <div class="card" data-food="egg-sandwish">
+        <img class="front-face" src="imgs/egg-sandwish.jpg" />
+        <img class="back-face" src="imgs/back-face.jpg" />
+      </div>
+      <div class="card" data-food="fast-food">
+        <img class="front-face" src="imgs/fast-food.jpg" />
+        <img class="back-face" src="imgs/back-face.jpg" />
+      </div>
+      <div class="card" data-food="fried-egg">
+        <img class="front-face" src="imgs/fried-egg.jpg" />
+        <img class="back-face" src="imgs/back-face.jpg" />
+      </div>
+      <div class="card" data-food="egg-bacon">
+        <img class="front-face" src="imgs/egg-bacon.jpg" />
+        <img class="back-face" src="imgs/back-face.jpg" />
+      </div>
+      <div class="card" data-food="fried-chicken">
+        <img class="front-face" src="imgs/fried-chicken.jpg" />
+        <img class="back-face" src="imgs/back-face.jpg"/>
+      </div>
+      <div class="card" data-food="pizza-piece">
+        <img class="front-face" src="/imgs/pizza-piece.jpg" />
+        <img class="back-face" src="imgs/back-face.jpg"/>
+      </div>
+      <div class="card" data-food="mc-fries">
+        <img class="front-face" src="imgs/mc-fries.jpg" />
+        <img class="back-face" src="imgs/back-face.jpg"/>
+      </div>
+      <div class="card" data-food="salty-chips">
+        <img class="front-face" src="imgs/salty-chips.jpg" />
+        <img class="back-face" src="imgs/back-face.jpg"/>
+      </div>
+      <div class="card" data-food="hot-dog">
+        <img class="front-face" src="imgs/hot-dog.jpg" />
+        <img class="back-face" src="imgs/back-face.jpg" />
+      </div>
+      <div class="card" data-food="sandwish">
+        <img class="front-face" src="imgs/sandwish.jpg" />
+        <img class="back-face" src="imgs/back-face.jpg" />
+      </div>
+      <div class="card" data-food="nuggets">
+        <img class="front-face" src="imgs/nuggets.jpg" />
+        <img class="back-face" src="imgs/back-face.jpg" />
+      </div>
+      <div class="card" data-food="fries">
+        <img class="front-face" src="imgs/fries.jpg" />
+        <img class="back-face" src="imgs/back-face.jpg" />
+      </div>
+      <div class="card" data-food="chessburger">
+        <img class="front-face" src="imgs/chessburger.jpg" />
+        <img class="back-face" src="imgs/back-face.jpg" />
+      </div>
+      <div class="card" data-food="humburger">
+        <img class="front-face" src="imgs/humburger.jpg" />
+        <img class="back-face" src="imgs/back-face.jpg" />
+      </div>
+      <div class="card" data-food="chips">
+        <img class="front-face" src="imgs/chips.jpg" />
+        <img class="back-face" src="imgs/back-face.jpg" />
+      </div>
+      <div class="card" data-food="egg-sandwish">
+        <img class="front-face" src="imgs/egg-sandwish.jpg" />
+        <img class="back-face" src="imgs/back-face.jpg" />
+      </div>
+      <div class="card" data-food="fast-food">
+        <img class="front-face" src="imgs/fast-food.jpg" />
+        <img class="back-face" src="imgs/back-face.jpg" />
+      </div>
+      <div class="card" data-food="fried-egg">
+        <img class="front-face" src="imgs/fried-egg.jpg" />
+        <img class="back-face" src="imgs/back-face.jpg" />
+      </div>
+      <div class="card" data-food="egg-bacon">
+        <img class="front-face" src="imgs/egg-bacon.jpg" />
+        <img class="back-face" src="imgs/back-face.jpg" />
+      </div>
+      <div class="card" data-food="fried-chicken">
+        <img class="front-face" src="imgs/fried-chicken.jpg" />
+        <img class="back-face" src="imgs/back-face.jpg"/>
+      </div>
+      <div class="card" data-food="pizza-piece">
+        <img class="front-face" src="/imgs/pizza-piece.jpg" />
+        <img class="back-face" src="imgs/back-face.jpg"/>
+      </div>
+      <div class="card" data-food="mc-fries">
+        <img class="front-face" src="imgs/mc-fries.jpg" />
+        <img class="back-face" src="imgs/back-face.jpg"/>
+      </div>
+      <div class="card" data-food="salty-chips">
+        <img class="front-face" src="imgs/salty-chips.jpg" />
+        <img class="back-face" src="imgs/back-face.jpg"/>
+      </div>
+ 
+      
+ 
+  </body>
+  <script src="index.js"></script>
+</html>
